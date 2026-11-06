@@ -32,30 +32,39 @@ const Bio = () => {
       marginTop: `1rem`,
       marginBottom: `3.5rem`
     }}>
-      {/* 左侧：文字与社交链接 */}
+      {/* 左侧：大标题 + 纯矢量图标 + 自我介绍 */}
       <div style={{ flex: `1 1 340px`, minWidth: `280px` }}>
         <h1 style={{
           fontSize: `2.2rem`,
           fontWeight: `800`,
-          lineHeight: `1.2`,
-          color: `#1E80FF`, /* 你的官方品牌蓝！也可以用深蓝渐变 */
+          lineHeight: `1.25`,
+          color: `#1E80FF`,
           marginBottom: `1rem`,
           marginTop: 0
         }}>
-          ⚡ Hello! {author?.name} is a hacker, builder, and researcher.
+          ⚡ Hello! {author?.name} is a hacker, builder, and researcher ✨
         </h1>
 
-        {/* 社交小标签行 */}
-        <div style={{ display: `flex`, gap: `12px`, marginBottom: `1.2rem`, fontSize: `0.9rem` }}>
-          <a href={`https://x.com/${social?.twitter}`} target="_blank" rel="noreferrer" style={{ color: `#666`, textDecoration: `none`, fontWeight: `bold` }}>𝕏 Twitter</a>
-          <span style={{ color: `#ccc` }}>/</span>
-          <a href="https://github.com/z28579304198-stack" target="_blank" rel="noreferrer" style={{ color: `#666`, textDecoration: `none`, fontWeight: `bold` }}>GitHub</a>
+        {/* 原版同款：纯黑白 SVG 矢量小图标行 */}
+        <div style={{ display: `flex`, alignItems: `center`, gap: `16px`, marginBottom: `1.25rem` }}>
+          {/* GitHub 图标 */}
+          <a href="https://github.com/z28579304198-stack" target="_blank" rel="noreferrer" aria-label="GitHub" style={{ color: `#4B5563`, display: `flex` }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          {/* Twitter / X 图标 */}
+          <a href={`https://x.com/${social?.twitter || 'yupeng_zha14062'}`} target="_blank" rel="noreferrer" aria-label="Twitter" style={{ color: `#4B5563`, display: `flex` }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
         </div>
 
         {/* 详细自我介绍正文 */}
         <p style={{
           fontSize: `1rem`,
-          lineHeight: `1.65`,
+          lineHeight: `1.7`,
           color: `#374151`,
           margin: 0
         }}>
@@ -63,24 +72,24 @@ const Bio = () => {
         </p>
       </div>
 
-      {/* 右侧：高质感大圆头像（带品牌蓝光圈） */}
+      {/* 右侧：原版同款清爽蓝青色圆环 + 左下角相机小徽章 */}
       <div style={{
+        position: `relative`,
         flexShrink: 0,
         borderRadius: `50%`,
         padding: `6px`,
-        background: `linear-gradient(135deg, #1E80FF, #00D2FF)`, /* 极具科技感的蓝青色渐变光环 */
+        background: `#67E8F9`, /* 原版同款清爽青蓝色环 */
         display: `flex`,
         alignItems: `center`,
-        justifyContent: `center`,
-        boxShadow: `0 10px 25px -5px rgba(30, 128, 255, 0.3)`
+        justifyContent: `center`
       }}>
         <StaticImage
           className="bio-avatar"
           layout="fixed"
           formats={["auto", "webp", "avif"]}
           src="../images/profile-pic.png"
-          width={180}
-          height={180}
+          width={190}
+          height={190}
           quality={95}
           alt={author?.name || ``}
           style={{
@@ -88,6 +97,24 @@ const Bio = () => {
             display: `block`
           }}
         />
+        {/* 原版头像左下角那个精致的黑色小徽章 */}
+        <div style={{
+          position: `absolute`,
+          bottom: `12px`,
+          left: `12px`,
+          background: `#111827`,
+          color: `#fff`,
+          width: `28px`,
+          height: `28px`,
+          borderRadius: `50%`,
+          display: `flex`,
+          alignItems: `center`,
+          justifyContent: `center`,
+          fontSize: `14px`,
+          border: `2px solid #fff`
+        }}>
+          📷
+        </div>
       </div>
     </div>
   )

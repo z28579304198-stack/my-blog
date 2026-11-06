@@ -9,15 +9,16 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Yupeng's Notes`, // 网站左上角标题（也可以叫 0xYupeng 或 宇鹏的思维矩阵）
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Yupeng`, // 显示在头像旁边的名字
+      // 对标 no.lol 风格的高逼格简介（中英结合，极简硬核）：
+      summary: `探索 LLMs、对抗网络安全、离散数学与开源生态。白天构建系统，深夜看论文与逆向工程。`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `A personal digital garden exploring AI, cybersecurity, mathematics, and open source.`,
+    siteUrl: `https://你的项目名.vercel.app/`, // 填入你的实际网址
     social: {
-      twitter: `kylemathews`,
+      twitter: `yupeng_zha14062`, // 你的推特ID（填在这里，链接自动生效！）
     },
   },
   plugins: [

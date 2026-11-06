@@ -9,14 +9,13 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Yupeng's Notes`, 
+    title: `Yupeng's Notes`,
     author: {
-      name: `Yupeng`, 
-      // 对标 no.lol 风格的高逼格简介（中英结合，极简硬核）：
-      summary: `探索 LLMs、对抗网络安全、离散数学与开源生态。白天构建系统，深夜看论文与逆向工程。`,
+      name: `Yupeng`,
+      summary: `探索 LLMs、对抗网络安全、离散数学与开源生态。`,
     },
     description: `A personal digital garden exploring AI, cybersecurity, mathematics, and open source.`,
-    siteUrl: `https://你的项目名.vercel.app/`, 
+    siteUrl: `https://my-blog-sigma-dusky.vercel.app/`,
     social: {
       twitter: `yupeng_zha14062`,
     },

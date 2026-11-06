@@ -22,6 +22,19 @@ const Layout = ({ location, title, children }) => {
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <nav style={{ 
+  display: 'flex', 
+  gap: '12px', 
+  fontSize: 'var(--fontSize-0)', 
+  color: 'var(--color-text-light)', 
+  marginBottom: 'var(--spacing-8)' 
+}}>
+  <span style={{ fontWeight: 'bold', color: 'var(--color-heading)' }}>yupeng.lol</span>
+  <span>·</span>
+  <a href="/" style={{ color: 'inherit', textDecoration: 'none' }}>Writing</a>
+  <span>·</span>
+  <a href="https://x.com/yupeng_zha14062" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Twitter</a>
+</nav>
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
